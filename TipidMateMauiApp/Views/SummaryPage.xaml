@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TipidMateMauiApp.ViewModels"
+             xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             x:Class="TipidMateMauiApp.Views.SummaryPage"
+             x:DataType="vm:MainViewModel"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#FAF9F6">
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="22,52,22,16">
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="2">
+                    <Label Text="TipidMate 💳" FontSize="10"
+                           FontAttributes="Bold" TextColor="#4ECDC4"
+                           CharacterSpacing="2"/>
+                    <Label Text="📊 Summary" FontSize="20"
+                           FontAttributes="Bold" TextColor="#2D2D35"/>
+                </VerticalStackLayout>
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 10"
+                        Stroke="Transparent">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#4ECDC4" Offset="0"/>
+                            <GradientStop Color="#38b2aa" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Button Text="📤 Export CSV" TextColor="White"
+                            FontSize="12" FontAttributes="Bold"
+                            BackgroundColor="Transparent"
+                            Clicked="OnExportClicked"/>
+                </Border>
+            </Grid>
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="16,16,16,100" Spacing="14">
+
+                <!-- ── CHART TAB TOGGLE ── -->
+                <Border BackgroundColor="White"
+                        StrokeShape="RoundRectangle 14"
+                        Stroke="#EFEFEF" StrokeThickness="1"
+                        Padding="5">
+                    <Grid ColumnDefinitions="*,*,*" ColumnSpacing="4">
+                        <Border x:Name="PieTabBorder" Grid.Column="0"
+                                BackgroundColor="#4ECDC4"
+                                StrokeShape="RoundRectangle 10"
+                                Stroke="Transparent" Padding="0,9">
+                            <Label x:Name="PieTabLabel"
+                                   Text="🥧 Pie" FontSize="12"
+                                   FontAttributes="Bold" TextColor="White"
+                                   HorizontalOptions="Center"/>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnPieTabTapped"/>
+                            </Border.GestureRecognizers>
+                        </Border>
+                        <Border x:Name="BarTabBorder" Grid.Column="1"
+                                BackgroundColor="Transparent"
+                                StrokeShape="RoundRectangle 10"
+                                Stroke="Transparent" Padding="0,9">
+                            <Label x:Name="BarTabLabel"
+                                   Text="📊 Weekly" FontSize="12"
+                                   FontAttributes="None"
+                                   TextColor="#9898A6"
+                                   HorizontalOptions="Center"/>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnBarTabTapped"/>
+                            </Border.GestureRecognizers>
+                        </Border>
+                        <Border x:Name="LineTabBorder" Grid.Column="2"
+                                BackgroundColor="Transparent"
+                                StrokeShape="RoundRectangle 10"
+                                Stroke="Transparent" Padding="0,9">
+                            <Label x:Name="LineTabLabel"
+                                   Text="📈 Trend" FontSize="12"
+                                   FontAttributes="None"
+                                   TextColor="#9898A6"
+                                   HorizontalOptions="Center"/>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLineTabTapped"/>
+                            </Border.GestureRecognizers>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!-- ══ PIE CHART CARD ══ -->
+                <Border x:Name="PieCard" BackgroundColor="White"
+                        StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1"
+                        Padding="18">
+                    <VerticalStackLayout Spacing="12">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                <Label Text="🥧 Category Breakdown"
+                                       FontSize="14" FontAttributes="Bold"
+                                       TextColor="#2D2D35"/>
+                                <Label x:Name="PieMonthLabel"
+                                       FontSize="11" TextColor="#9898A6"/>
+                            </VerticalStackLayout>
+                            <Border Grid.Column="1"
+                                    BackgroundColor="#E8FBF8"
+                                    StrokeShape="RoundRectangle 8"
+                                    Stroke="Transparent" Padding="10,4">
+                                <Label x:Name="PieTotalLabel"
+                                       FontSize="11" FontAttributes="Bold"
+                                       TextColor="#4ECDC4"/>
+                            </Border>
+                        </Grid>
+
+                        <!-- Microcharts DonutChart -->
+                        <microcharts:ChartView x:Name="PieChartView"
+                                               HeightRequest="220"
+                                               BackgroundColor="Transparent"/>
+
+                        <!-- Tap hint -->
+                        <Label Text="💡 Tap legend to filter transactions"
+                               FontSize="10" TextColor="#9898A6"
+                               HorizontalOptions="Center"/>
+
+                        <!-- Legend (built in code) -->
+                        <VerticalStackLayout x:Name="PieLegendStack"
+                                             Spacing="4"/>
+
+                        <!-- Filter Banner -->
+                        <Border x:Name="FilterBanner" IsVisible="False"
+                                BackgroundColor="#E8FBF8"
+                                StrokeShape="RoundRectangle 10"
+                                Stroke="#4ECDC433" Padding="12,8">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <Label x:Name="FilterLabel"
+                                       Grid.Column="0" FontSize="12"
+                                       FontAttributes="Bold"
+                                       TextColor="#2D2D35"
+                                       VerticalOptions="Center"/>
+                                <Button Grid.Column="1" Text="✕ Clear"
+                                        FontSize="11" TextColor="#4ECDC4"
+                                        BackgroundColor="Transparent"
+                                        Clicked="OnClearFilterClicked"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- Empty -->
+                        <Label x:Name="PieEmptyLabel" IsVisible="False"
+                               Text="No expenses this month yet!"
+                               FontSize="13" TextColor="#9898A6"
+                               HorizontalOptions="Center"
+                               Padding="0,16"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- ══ BAR CHART CARD ══ -->
+                <Border x:Name="BarCard" IsVisible="False"
+                        BackgroundColor="White"
+                        StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1"
+                        Padding="18">
+                    <VerticalStackLayout Spacing="12">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                <Label Text="📊 Daily Spending This Week"
+                                       FontSize="14" FontAttributes="Bold"
+                                       TextColor="#2D2D35"/>
+                                <Label x:Name="BarWeekLabel"
+                                       FontSize="11" TextColor="#9898A6"/>
+                            </VerticalStackLayout>
+                            <Border Grid.Column="1"
+                                    BackgroundColor="#E8FBF8"
+                                    StrokeShape="RoundRectangle 8"
+                                    Stroke="Transparent" Padding="10,4">
+                                <Label x:Name="BarTotalLabel"
+                                       FontSize="11" FontAttributes="Bold"
+                                       TextColor="#4ECDC4"/>
+                            </Border>
+                        </Grid>
+
+                        <microcharts:ChartView x:Name="BarChartView"
+                                               HeightRequest="220"
+                                               BackgroundColor="Transparent"/>
+
+                        <Label Text="💡 Mon – Sun daily breakdown"
+                               FontSize="10" TextColor="#9898A6"
+                               HorizontalOptions="Center"/>
+
+                        <Label x:Name="BarEmptyLabel" IsVisible="False"
+                               Text="No spending this week yet!"
+                               FontSize="13" TextColor="#9898A6"
+                               HorizontalOptions="Center"
+                               Padding="0,16"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- ══ LINE CHART CARD ══ -->
+                <Border x:Name="LineCard" IsVisible="False"
+                        BackgroundColor="White"
+                        StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1"
+                        Padding="18">
+                    <VerticalStackLayout Spacing="12">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                <Label Text="📈 Balance Trend (30 Days)"
+                                       FontSize="14" FontAttributes="Bold"
+                                       TextColor="#2D2D35"/>
+                                <Label x:Name="LineDateLabel"
+                                       FontSize="11" TextColor="#9898A6"/>
+                            </VerticalStackLayout>
+                            <Border Grid.Column="1"
+                                    BackgroundColor="#E8FBF8"
+                                    StrokeShape="RoundRectangle 8"
+                                    Stroke="Transparent" Padding="10,4">
+                                <Label x:Name="LineTrendLabel"
+                                       FontSize="11" FontAttributes="Bold"
+                                       TextColor="#4ECDC4"/>
+                            </Border>
+                        </Grid>
+
+                        <microcharts:ChartView x:Name="LineChartView"
+                                               HeightRequest="220"
+                                               BackgroundColor="Transparent"/>
+
+                        <Label Text="💡 Running balance last 30 days"
+                               FontSize="10" TextColor="#9898A6"
+                               HorizontalOptions="Center"/>
+
+                        <Label x:Name="LineEmptyLabel" IsVisible="False"
+                               Text="Not enough data for trend yet!"
+                               FontSize="13" TextColor="#9898A6"
+                               HorizontalOptions="Center"
+                               Padding="0,16"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- ══ ORIGINAL MONTHLY BARS ══ -->
+                <Border BackgroundColor="White"
+                        StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1"
+                        Padding="18">
+                    <VerticalStackLayout Spacing="12">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                <Label Text="📊 Monthly Spending"
+                                       FontSize="14" FontAttributes="Bold"
+                                       TextColor="#2D2D35"/>
+                                <Label x:Name="ChartMonthLabel"
+                                       FontSize="11" TextColor="#9898A6"/>
+                            </VerticalStackLayout>
+                            <Border Grid.Column="1"
+                                    BackgroundColor="#E8FBF8"
+                                    StrokeShape="RoundRectangle 8"
+                                    Stroke="Transparent" Padding="10,4">
+                                <Label x:Name="ChartTotalLabel"
+                                       FontSize="11" FontAttributes="Bold"
+                                       TextColor="#4ECDC4"/>
+                            </Border>
+                        </Grid>
+                        <VerticalStackLayout x:Name="ChartBarsStack"
+                                             Spacing="10"/>
+                        <Label x:Name="ChartEmptyLabel" IsVisible="False"
+                               Text="No expenses this month — tap Add!"
+                               FontSize="13" TextColor="#9898A6"
+                               HorizontalOptions="Center" Padding="0,12"/>
+                        <Grid x:Name="ChartLegend" IsVisible="False"
+                              ColumnDefinitions="Auto,Auto,*"
+                              ColumnSpacing="16">
+                            <HorizontalStackLayout Grid.Column="0" Spacing="5">
+                                <BoxView WidthRequest="10" HeightRequest="10"
+                                         CornerRadius="2" Color="#4ECDC4"
+                                         VerticalOptions="Center"/>
+                                <Label Text="Actual" FontSize="10"
+                                       TextColor="#9898A6"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1" Spacing="5">
+                                <BoxView WidthRequest="10" HeightRequest="10"
+                                         CornerRadius="2" Color="#FFD166"
+                                         VerticalOptions="Center"/>
+                                <Label Text="Budget limit" FontSize="10"
+                                       TextColor="#9898A6"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Column="2" Spacing="5">
+                                <BoxView WidthRequest="10" HeightRequest="10"
+                                         CornerRadius="2" Color="#FF6B6B"
+                                         VerticalOptions="Center"/>
+                                <Label Text="Over budget" FontSize="10"
+                                       TextColor="#9898A6"/>
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- ══ EXCEL TABLE ══ -->
+                <Border BackgroundColor="White"
+                        StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" Padding="0"
+                        StrokeThickness="1">
+                    <VerticalStackLayout Spacing="0">
+                        <Grid ColumnDefinitions="2*,1*,1.2*,1*"
+                              BackgroundColor="#4ECDC4" Padding="16,12">
+                            <Label Grid.Column="0" Text="CATEGORY"
+                                   FontSize="10" FontAttributes="Bold"
+                                   TextColor="White" CharacterSpacing="0.8"/>
+                            <Label Grid.Column="1" Text="#"
+                                   FontSize="10" FontAttributes="Bold"
+                                   TextColor="White" CharacterSpacing="0.8"
+                                   HorizontalOptions="End"/>
+                            <Label Grid.Column="2" Text="TOTAL"
+                                   FontSize="10" FontAttributes="Bold"
+                                   TextColor="White" CharacterSpacing="0.8"
+                                   HorizontalOptions="End"/>
+                            <Label Grid.Column="3" Text="% EXP"
+                                   FontSize="10" FontAttributes="Bold"
+                                   TextColor="White" CharacterSpacing="0.8"
+                                   HorizontalOptions="End"/>
+                        </Grid>
+                        <VerticalStackLayout x:Name="TableRowsStack"/>
+                        <Grid ColumnDefinitions="2*,1*,1.2*,1*"
+                              BackgroundColor="#4ECDC420" Padding="16,13">
+                            <BoxView Grid.ColumnSpan="4" Color="#4ECDC4"
+                                     HeightRequest="2" VerticalOptions="Start"
+                                     Margin="0,-13,0,0"/>
+                            <Label Grid.Column="0" Text="TOTAL"
+                                   FontSize="13" FontAttributes="Bold"
+                                   TextColor="#4ECDC4"/>
+                            <Label x:Name="TotalCountLabel" Grid.Column="1"
+                                   FontSize="13" FontAttributes="Bold"
+                                   TextColor="#4ECDC4"
+                                   HorizontalOptions="End"/>
+                            <Label Grid.Column="2"
+                                   Text="{Binding TotalExpenseDisplay}"
+                                   FontSize="13" FontAttributes="Bold"
+                                   TextColor="#FF6B6B"
+                                   HorizontalOptions="End"/>
+                            <Label Grid.Column="3" Text="100%"
+                                   FontSize="13" FontAttributes="Bold"
+                                   TextColor="#2D2D35"
+                                   HorizontalOptions="End"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- ══ INCOME BREAKDOWN ══ -->
+                <Border BackgroundColor="#E8FBF8"
+                        StrokeShape="RoundRectangle 20"
+                        Stroke="#4ECDC433" StrokeThickness="1"
+                        Padding="18">
+                    <VerticalStackLayout Spacing="0">
+                        <Label Text="💰 Income Breakdown"
+                               FontSize="14" FontAttributes="Bold"
+                               TextColor="#4ECDC4" Margin="0,0,0,12"/>
+                        <VerticalStackLayout x:Name="IncomeRowsStack"/>
+                        <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
+                            <Label Grid.Column="0" Text="Total Income"
+                                   FontSize="14" FontAttributes="Bold"
+                                   TextColor="#4ECDC4"/>
+                            <Label Grid.Column="1"
+                                   Text="{Binding TotalIncomeDisplay}"
+                                   FontSize="14" FontAttributes="Bold"
+                                   TextColor="#06D6A0"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- ══ NET BALANCE ══ -->
+                <Border x:Name="NetBalanceCard"
+                        StrokeShape="RoundRectangle 16"
+                        StrokeThickness="2" Padding="20,16">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout Grid.Column="0" Spacing="4">
+                            <Label Text="NET BALANCE" FontSize="10"
+                                   FontAttributes="Bold" TextColor="#9898A6"
+                                   CharacterSpacing="1"/>
+                            <Label x:Name="NetBalanceMessage"
+                                   FontSize="12" TextColor="#9898A6"/>
+                        </VerticalStackLayout>
+                        <Label x:Name="NetBalanceLabel" Grid.Column="1"
+                               FontSize="22" FontAttributes="Bold"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

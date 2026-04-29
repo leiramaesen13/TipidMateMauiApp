@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TipidMateMauiApp.ViewModels"
+             x:Class="TipidMateMauiApp.Views.ProfilePage"
+             x:DataType="vm:MainViewModel"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#FAF9F6">
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="22,52,22,16">
+            <VerticalStackLayout Spacing="2">
+                <Label Text="TipidMate" FontSize="10" FontAttributes="Bold"
+                       TextColor="#4ECDC4" CharacterSpacing="2"/>
+                <Label Text="👤 Profile" FontSize="20" FontAttributes="Bold"
+                       TextColor="#2D2D35"/>
+            </VerticalStackLayout>
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="16,16,16,100" Spacing="14">
+
+                <!-- Avatar Hero Card -->
+                <Border StrokeShape="RoundRectangle 20" Stroke="Transparent" Padding="20">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#4ECDC4" Offset="0"/>
+                            <GradientStop Color="#38b2aa" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                        <Label x:Name="AvatarLabel" FontSize="60"
+                               HorizontalOptions="Center"/>
+                        <Label x:Name="UserNameLabel" FontSize="22"
+                               FontAttributes="Bold" TextColor="White"
+                               HorizontalOptions="Center"/>
+                        <Label x:Name="UserHandleLabel" FontSize="14"
+                               TextColor="#E0F7F5" HorizontalOptions="Center"/>
+
+                        <!-- Stat pills -->
+                        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10"
+                              Margin="0,10,0,0">
+                            <Border Grid.Column="0" BackgroundColor="#40FFFFFF"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="Transparent" Padding="6,10">
+                                <VerticalStackLayout Spacing="2"
+                                                     HorizontalOptions="Center">
+                                    <Label Text="ENTRIES" FontSize="9"
+                                           FontAttributes="Bold"
+                                           TextColor="#E0F7F5" CharacterSpacing="1"
+                                           HorizontalOptions="Center"/>
+                                    <Label x:Name="StatEntriesLabel" FontSize="15"
+                                           FontAttributes="Bold" TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                </VerticalStackLayout>
+                            </Border>
+                            <Border Grid.Column="1" BackgroundColor="#40FFFFFF"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="Transparent" Padding="6,10">
+                                <VerticalStackLayout Spacing="2"
+                                                     HorizontalOptions="Center">
+                                    <Label Text="INCOME" FontSize="9"
+                                           FontAttributes="Bold"
+                                           TextColor="#E0F7F5" CharacterSpacing="1"
+                                           HorizontalOptions="Center"/>
+                                    <Label x:Name="StatIncomeLabel" FontSize="13"
+                                           FontAttributes="Bold" TextColor="White"
+                                           HorizontalOptions="Center"
+                                           LineBreakMode="TailTruncation"/>
+                                </VerticalStackLayout>
+                            </Border>
+                            <Border Grid.Column="2" BackgroundColor="#40FFFFFF"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="Transparent" Padding="6,10">
+                                <VerticalStackLayout Spacing="2"
+                                                     HorizontalOptions="Center">
+                                    <Label Text="SPENT" FontSize="9"
+                                           FontAttributes="Bold"
+                                           TextColor="#E0F7F5" CharacterSpacing="1"
+                                           HorizontalOptions="Center"/>
+                                    <Label x:Name="StatSpentLabel" FontSize="13"
+                                           FontAttributes="Bold" TextColor="White"
+                                           HorizontalOptions="Center"
+                                           LineBreakMode="TailTruncation"/>
+                                </VerticalStackLayout>
+                            </Border>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Stats Card -->
+                <Border BackgroundColor="White" StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1" Padding="18">
+                    <VerticalStackLayout Spacing="0">
+                        <Label Text="📈 Your Stats" FontSize="14"
+                               FontAttributes="Bold" TextColor="#2D2D35"
+                               Margin="0,0,0,14"/>
+                        <VerticalStackLayout x:Name="StatsStack" Spacing="0"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Quick Actions -->
+                <Border BackgroundColor="White" StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1" Padding="18">
+                    <VerticalStackLayout Spacing="0">
+                        <Label Text="⚙️ Quick Actions" FontSize="14"
+                               FontAttributes="Bold" TextColor="#2D2D35"
+                               Margin="0,0,0,14"/>
+                        <Grid ColumnDefinitions="Auto,*,Auto"
+                              Padding="0,12" ColumnSpacing="12">
+                            <BoxView Grid.ColumnSpan="3" Color="#EFEFEF"
+                                     HeightRequest="1" VerticalOptions="Start"
+                                     Margin="0,-12,0,0"/>
+                            <Label Grid.Column="0" Text="🎯" FontSize="20"
+                                   VerticalOptions="Center"/>
+                            <Label Grid.Column="1" Text="Set Budget Limits"
+                                   FontSize="14" FontAttributes="Bold"
+                                   TextColor="#3D3D4E" VerticalOptions="Center"/>
+                            <Label Grid.Column="2" Text="›" FontSize="18"
+                                   TextColor="#9898A6" VerticalOptions="Center"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnBudgetsClicked"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto,*,Auto"
+                              Padding="0,12" ColumnSpacing="12">
+                            <BoxView Grid.ColumnSpan="3" Color="#EFEFEF"
+                                     HeightRequest="1" VerticalOptions="Start"
+                                     Margin="0,-12,0,0"/>
+                            <Label Grid.Column="0" Text="📤" FontSize="20"
+                                   VerticalOptions="Center"/>
+                            <Label Grid.Column="1" Text="Export to CSV"
+                                   FontSize="14" FontAttributes="Bold"
+                                   TextColor="#3D3D4E" VerticalOptions="Center"/>
+                            <Label Grid.Column="2" Text="›" FontSize="18"
+                                   TextColor="#9898A6" VerticalOptions="Center"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnExportClicked"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto,*,Auto"
+                              Padding="0,12" ColumnSpacing="12">
+                            <BoxView Grid.ColumnSpan="3" Color="#EFEFEF"
+                                     HeightRequest="1" VerticalOptions="Start"
+                                     Margin="0,-12,0,0"/>
+                            <Label Grid.Column="0" Text="📊" FontSize="20"
+                                   VerticalOptions="Center"/>
+                            <Label Grid.Column="1" Text="View Summary"
+                                   FontSize="14" FontAttributes="Bold"
+                                   TextColor="#3D3D4E" VerticalOptions="Center"/>
+                            <Label Grid.Column="2" Text="›" FontSize="18"
+                                   TextColor="#9898A6" VerticalOptions="Center"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSummaryClicked"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- ══════════════════════════════════════════
+                     NOTIFICATION SETTINGS SECTION
+                ═════════════════════════════════════════════ -->
+                <Border BackgroundColor="White" StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1" Padding="18">
+                    <VerticalStackLayout Spacing="0">
+
+                        <!-- Section Title -->
+                        <Label Text="🔔 Notification Settings" FontSize="14"
+                               FontAttributes="Bold" TextColor="#2D2D35"
+                               Margin="0,0,0,14"/>
+
+                        <!-- Master Toggle -->
+                        <Border BackgroundColor="#E8FBF8"
+                                StrokeShape="RoundRectangle 14"
+                                Stroke="#4ECDC433" StrokeThickness="1"
+                                Padding="14,12" Margin="0,0,0,14">
+                            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
+                                <Label Grid.Column="0" Text="🔔" FontSize="22"
+                                       VerticalOptions="Center"/>
+                                <VerticalStackLayout Grid.Column="1" Spacing="2"
+                                                     VerticalOptions="Center">
+                                    <Label Text="Daily Budget Alerts"
+                                           FontSize="13" FontAttributes="Bold"
+                                           TextColor="#2D2D35"/>
+                                    <Label x:Name="NotifStatusLabel"
+                                           FontSize="11" TextColor="#9898A6"/>
+                                </VerticalStackLayout>
+                                <Switch x:Name="NotifMasterSwitch"
+                                        Grid.Column="2"
+                                        OnColor="#4ECDC4"
+                                        ThumbColor="White"
+                                        VerticalOptions="Center"
+                                        Toggled="OnMasterSwitchToggled"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- Notification Options (visible when enabled) -->
+                        <VerticalStackLayout x:Name="NotifOptionsPanel"
+                                             Spacing="12" IsVisible="False">
+
+                            <!-- Individual toggles -->
+                            <BoxView Color="#F0F4F4" HeightRequest="1"/>
+
+                            <!-- Over Budget Alert -->
+                            <Grid ColumnDefinitions="Auto,*,Auto"
+                                  ColumnSpacing="12" Padding="0,4">
+                                <Label Grid.Column="0" Text="🚨" FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <VerticalStackLayout Grid.Column="1" Spacing="1"
+                                                     VerticalOptions="Center">
+                                    <Label Text="Over Budget Alert" FontSize="13"
+                                           FontAttributes="Bold" TextColor="#3D3D4E"/>
+                                    <Label Text="Alert when you exceed any category limit"
+                                           FontSize="10" TextColor="#9898A6"/>
+                                </VerticalStackLayout>
+                                <Switch x:Name="OverBudgetSwitch"
+                                        Grid.Column="2" OnColor="#4ECDC4"
+                                        ThumbColor="White"
+                                        VerticalOptions="Center"
+                                        IsToggled="True"/>
+                            </Grid>
+
+                            <!-- 80% Warning -->
+                            <Grid ColumnDefinitions="Auto,*,Auto"
+                                  ColumnSpacing="12" Padding="0,4">
+                                <Label Grid.Column="0" Text="⚠️" FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <VerticalStackLayout Grid.Column="1" Spacing="1"
+                                                     VerticalOptions="Center">
+                                    <Label Text="80% Warning" FontSize="13"
+                                           FontAttributes="Bold" TextColor="#3D3D4E"/>
+                                    <Label Text="Warn when 80% of budget is used"
+                                           FontSize="10" TextColor="#9898A6"/>
+                                </VerticalStackLayout>
+                                <Switch x:Name="EightyPctSwitch"
+                                        Grid.Column="2" OnColor="#4ECDC4"
+                                        ThumbColor="White"
+                                        VerticalOptions="Center"
+                                        IsToggled="True"/>
+                            </Grid>
+
+                            <!-- Daily Summary -->
+                            <Grid ColumnDefinitions="Auto,*,Auto"
+                                  ColumnSpacing="12" Padding="0,4">
+                                <Label Grid.Column="0" Text="💚" FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <VerticalStackLayout Grid.Column="1" Spacing="1"
+                                                     VerticalOptions="Center">
+                                    <Label Text="Daily Summary" FontSize="13"
+                                           FontAttributes="Bold" TextColor="#3D3D4E"/>
+                                    <Label Text="Daily spending recap notification"
+                                           FontSize="10" TextColor="#9898A6"/>
+                                </VerticalStackLayout>
+                                <Switch x:Name="DailySummarySwitch"
+                                        Grid.Column="2" OnColor="#4ECDC4"
+                                        ThumbColor="White"
+                                        VerticalOptions="Center"
+                                        IsToggled="True"/>
+                            </Grid>
+
+                            <BoxView Color="#F0F4F4" HeightRequest="1"/>
+
+                            <!-- Time Picker Label -->
+                            <Label Text="⏰ Alert Time" FontSize="13"
+                                   FontAttributes="Bold" TextColor="#2D2D35"
+                                   Margin="0,4,0,8"/>
+
+                            <!-- Preset Time Buttons -->
+                            <Label Text="QUICK PRESETS" FontSize="9"
+                                   FontAttributes="Bold" TextColor="#9898A6"
+                                   CharacterSpacing="1" Margin="0,0,0,6"/>
+                            <Grid ColumnDefinitions="*,*,*,*,*" ColumnSpacing="6">
+                                <Border x:Name="Preset8AM" Grid.Column="0"
+                                        StrokeShape="RoundRectangle 10"
+                                        Stroke="#E2EAEA" BackgroundColor="#F8FAFB"
+                                        Padding="0,8">
+                                    <Label Text="8 AM" FontSize="11"
+                                           FontAttributes="Bold"
+                                           TextColor="#9898A6"
+                                           HorizontalOptions="Center"/>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="OnPresetTapped"
+                                            CommandParameter="08:00"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border x:Name="Preset12PM" Grid.Column="1"
+                                        StrokeShape="RoundRectangle 10"
+                                        Stroke="#E2EAEA" BackgroundColor="#F8FAFB"
+                                        Padding="0,8">
+                                    <Label Text="12 PM" FontSize="11"
+                                           FontAttributes="Bold"
+                                           TextColor="#9898A6"
+                                           HorizontalOptions="Center"/>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="OnPresetTapped"
+                                            CommandParameter="12:00"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border x:Name="Preset6PM" Grid.Column="2"
+                                        StrokeShape="RoundRectangle 10"
+                                        Stroke="#E2EAEA" BackgroundColor="#F8FAFB"
+                                        Padding="0,8">
+                                    <Label Text="6 PM" FontSize="11"
+                                           FontAttributes="Bold"
+                                           TextColor="#9898A6"
+                                           HorizontalOptions="Center"/>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="OnPresetTapped"
+                                            CommandParameter="18:00"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border x:Name="Preset8PM" Grid.Column="3"
+                                        StrokeShape="RoundRectangle 10"
+                                        Stroke="#4ECDC4" BackgroundColor="#E8FBF8"
+                                        Padding="0,8">
+                                    <Label Text="8 PM" FontSize="11"
+                                           FontAttributes="Bold"
+                                           TextColor="#4ECDC4"
+                                           HorizontalOptions="Center"/>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="OnPresetTapped"
+                                            CommandParameter="20:00"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border x:Name="Preset10PM" Grid.Column="4"
+                                        StrokeShape="RoundRectangle 10"
+                                        Stroke="#E2EAEA" BackgroundColor="#F8FAFB"
+                                        Padding="0,8">
+                                    <Label Text="10 PM" FontSize="11"
+                                           FontAttributes="Bold"
+                                           TextColor="#9898A6"
+                                           HorizontalOptions="Center"/>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="OnPresetTapped"
+                                            CommandParameter="22:00"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                            </Grid>
+
+                            <!-- Custom Time Picker -->
+                            <Label Text="CUSTOM TIME" FontSize="9"
+                                   FontAttributes="Bold" TextColor="#9898A6"
+                                   CharacterSpacing="1" Margin="0,10,0,6"/>
+                            <Border BackgroundColor="#F8FAFB"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="#E2EAEA" StrokeThickness="1.5">
+                                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8"
+                                      Padding="12,4">
+                                    <Label Grid.Column="0" Text="🕐" FontSize="18"
+                                           VerticalOptions="Center"/>
+                                    <TimePicker x:Name="CustomTimePicker"
+                                                Grid.Column="1"
+                                                Format="hh:mm tt"
+                                                TextColor="#2D2D35"
+                                                BackgroundColor="Transparent"
+                                                PropertyChanged="OnCustomTimeChanged"/>
+                                </Grid>
+                            </Border>
+
+                            <!-- Selected time display -->
+                            <Border BackgroundColor="#E8FBF8"
+                                    StrokeShape="RoundRectangle 10"
+                                    Stroke="#4ECDC433" Padding="12,8">
+                                <Grid ColumnDefinitions="Auto,*">
+                                    <Label Grid.Column="0" Text="✅ "
+                                           FontSize="13"/>
+                                    <Label x:Name="SelectedTimeLabel"
+                                           Grid.Column="1"
+                                           FontSize="12" FontAttributes="Bold"
+                                           TextColor="#2D2D35"/>
+                                </Grid>
+                            </Border>
+
+                            <!-- Save Button -->
+                            <Border StrokeShape="RoundRectangle 14"
+                                    Stroke="Transparent" Margin="0,4,0,0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0"
+                                                         EndPoint="1,0">
+                                        <GradientStop Color="#4ECDC4" Offset="0"/>
+                                        <GradientStop Color="#38b2aa" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Button Text="💾  Save Notification Settings"
+                                        TextColor="White" FontSize="14"
+                                        FontAttributes="Bold"
+                                        BackgroundColor="Transparent"
+                                        Clicked="OnSaveNotifSettingsClicked"/>
+                            </Border>
+
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Log Out -->
+                <Border BackgroundColor="White" StrokeShape="RoundRectangle 16"
+                        Stroke="#FF6B6B" StrokeThickness="2">
+                    <Button Text="🚪  Log Out" TextColor="#FF6B6B" FontSize="15"
+                            FontAttributes="Bold" BackgroundColor="Transparent"
+                            Clicked="OnLogoutClicked"/>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

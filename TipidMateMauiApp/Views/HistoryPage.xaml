@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TipidMateMauiApp.ViewModels"
+             xmlns:models="clr-namespace:TipidMateMauiApp.Models"
+             x:Class="TipidMateMauiApp.Views.HistoryPage"
+             x:DataType="vm:MainViewModel"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#F8FAFB">
+    <Grid RowDefinitions="Auto,Auto,Auto,*">
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="18,46,18,13">
+            <Grid.Shadow>
+                <Shadow Brush="Black" Opacity="0.04" Radius="4" Offset="0,1"/>
+            </Grid.Shadow>
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="1">
+                    <Label Text="TIPIDMATE" FontSize="8" FontAttributes="Bold"
+                           TextColor="#90A4A4" CharacterSpacing="1.5"/>
+                    <Label Text="Transactions" FontSize="18" FontAttributes="Bold"
+                           TextColor="#1C2B2B"/>
+                </VerticalStackLayout>
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 9" Stroke="Transparent">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#00897B" Offset="0"/>
+                            <GradientStop Color="#00695C" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Button Text="↓ CSV" TextColor="White" FontSize="12"
+                            FontAttributes="Bold" BackgroundColor="Transparent"
+                            HeightRequest="34" Clicked="OnExportClicked"/>
+                </Border>
+            </Grid>
+        </Grid>
+
+        <!-- Search + Date Filter -->
+        <Border Grid.Row="1" BackgroundColor="White"
+                StrokeShape="RoundRectangle 18" Stroke="#E2EAEA"
+                StrokeThickness="1" Margin="14,10,14,0" Padding="13">
+            <Border.Shadow>
+                <Shadow Brush="#00897B" Opacity="0.05" Radius="6" Offset="0,2"/>
+            </Border.Shadow>
+            <VerticalStackLayout Spacing="9">
+                <!-- Search -->
+                <Border BackgroundColor="#F8FAFB" StrokeShape="RoundRectangle 11"
+                        Stroke="#E2EAEA" StrokeThickness="1.5">
+                    <Grid ColumnDefinitions="36,*">
+                        <Label Grid.Column="0" Text="🔍" FontSize="15"
+                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Entry Grid.Column="1" Text="{Binding SearchQuery}"
+                               Placeholder="Search transactions..."
+                               PlaceholderColor="#90A4A4" TextColor="#1C2B2B"
+                               FontSize="13" BackgroundColor="Transparent"/>
+                    </Grid>
+                </Border>
+                <!-- Date range -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="9">
+                    <VerticalStackLayout Grid.Column="0" Spacing="4">
+                        <Label Text="FROM" FontSize="9" FontAttributes="Bold"
+                               TextColor="#90A4A4" CharacterSpacing="1"/>
+                        <Border BackgroundColor="#F8FAFB" StrokeShape="RoundRectangle 9"
+                                Stroke="#E2EAEA" StrokeThickness="1.5">
+                            <DatePicker x:Name="DateFromPicker" Format="MMM dd, yyyy"
+                                        TextColor="#1C2B2B" FontSize="12"
+                                        BackgroundColor="Transparent" Margin="7,3"
+                                        DateSelected="OnDateFromSelected"/>
+                        </Border>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" Spacing="4">
+                        <Label Text="TO" FontSize="9" FontAttributes="Bold"
+                               TextColor="#90A4A4" CharacterSpacing="1"/>
+                        <Border BackgroundColor="#F8FAFB" StrokeShape="RoundRectangle 9"
+                                Stroke="#E2EAEA" StrokeThickness="1.5">
+                            <DatePicker x:Name="DateToPicker" Format="MMM dd, yyyy"
+                                        TextColor="#1C2B2B" FontSize="12"
+                                        BackgroundColor="Transparent" Margin="7,3"
+                                        DateSelected="OnDateToSelected"/>
+                        </Border>
+                    </VerticalStackLayout>
+                </Grid>
+                <Button x:Name="ClearFiltersBtn" Text="✕  Clear Filters"
+                        BackgroundColor="#FFEBEE" TextColor="#C62828"
+                        FontSize="11" FontAttributes="Bold" CornerRadius="8"
+                        HeightRequest="30" IsVisible="False"
+                        HorizontalOptions="Start" Clicked="OnClearFiltersClicked"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Pills + Stats -->
+        <VerticalStackLayout Grid.Row="2" Spacing="8" Margin="0,9,0,0">
+            <ScrollView Orientation="Horizontal"
+                        HorizontalScrollBarVisibility="Never" Padding="14,0">
+                <HorizontalStackLayout x:Name="CategoryPillsStack" Spacing="7"/>
+            </ScrollView>
+            <Grid ColumnDefinitions="Auto,Auto,Auto,*" ColumnSpacing="7" Padding="14,0">
+                <Border x:Name="PillAll" Grid.Column="0"
+                        BackgroundColor="#00897B"
+                        StrokeShape="RoundRectangle 18" Stroke="Transparent"
+                        Padding="13,5">
+                    <Label Text="All" FontSize="11" FontAttributes="Bold" TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFilterAll"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+                <Border x:Name="PillExpense" Grid.Column="1"
+                        BackgroundColor="#F1F5F5"
+                        StrokeShape="RoundRectangle 18" Stroke="Transparent"
+                        Padding="13,5">
+                    <Label Text="↓ Expense" FontSize="11" FontAttributes="Bold" TextColor="#90A4A4">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFilterExpense"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+                <Border x:Name="PillIncome" Grid.Column="2"
+                        BackgroundColor="#F1F5F5"
+                        StrokeShape="RoundRectangle 18" Stroke="Transparent"
+                        Padding="13,5">
+                    <Label Text="↑ Income" FontSize="11" FontAttributes="Bold" TextColor="#90A4A4">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFilterIncome"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+            </Grid>
+            <!-- Stat bar -->
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="8" Padding="14,0">
+                <Border Grid.Column="0" BackgroundColor="White"
+                        StrokeShape="RoundRectangle 11" Stroke="#E2EAEA" Padding="9,7">
+                    <VerticalStackLayout Spacing="1" HorizontalOptions="Center">
+                        <Label Text="SHOWN" FontSize="8" FontAttributes="Bold"
+                               TextColor="#90A4A4" CharacterSpacing="1" HorizontalOptions="Center"/>
+                        <Label x:Name="ShownCountLabel" FontSize="12" FontAttributes="Bold"
+                               TextColor="#00897B" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Column="1" BackgroundColor="White"
+                        StrokeShape="RoundRectangle 11" Stroke="#E2EAEA" Padding="9,7">
+                    <VerticalStackLayout Spacing="1" HorizontalOptions="Center">
+                        <Label Text="TOTAL IN" FontSize="8" FontAttributes="Bold"
+                               TextColor="#90A4A4" CharacterSpacing="1" HorizontalOptions="Center"/>
+                        <Label x:Name="TotalInLabel" FontSize="12" FontAttributes="Bold"
+                               TextColor="#2E7D32" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Column="2" BackgroundColor="White"
+                        StrokeShape="RoundRectangle 11" Stroke="#E2EAEA" Padding="9,7">
+                    <VerticalStackLayout Spacing="1" HorizontalOptions="Center">
+                        <Label Text="TOTAL OUT" FontSize="8" FontAttributes="Bold"
+                               TextColor="#90A4A4" CharacterSpacing="1" HorizontalOptions="Center"/>
+                        <Label x:Name="TotalOutLabel" FontSize="12" FontAttributes="Bold"
+                               TextColor="#C62828" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+
+        <!-- List -->
+        <CollectionView Grid.Row="3" ItemsSource="{Binding FilteredTransactions}"
+                        Margin="14,9,14,0" SelectionMode="None">
+            <CollectionView.EmptyView>
+                <VerticalStackLayout HorizontalOptions="Center" Spacing="8" Padding="0,48">
+                    <Label Text="📋" FontSize="42" HorizontalOptions="Center"/>
+                    <Label Text="No transactions found" FontSize="15"
+                           FontAttributes="Bold" TextColor="#90A4A4"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Transaction">
+                    <Border BackgroundColor="White" StrokeShape="RoundRectangle 15"
+                            Stroke="#E2EAEA" StrokeThickness="1"
+                            Padding="13,11" Margin="0,0,0,9">
+                        <Grid ColumnDefinitions="42,*,Auto" ColumnSpacing="11">
+                            <Border Grid.Column="0" WidthRequest="42" HeightRequest="42"
+                                    StrokeShape="RoundRectangle 11" Stroke="Transparent"
+                                    BackgroundColor="#F1F5F5">
+                                <Label Text="{Binding CategoryIcon}" FontSize="21"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Border>
+                            <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                                <Label Text="{Binding Description}" FontSize="13"
+                                       FontAttributes="Bold" TextColor="#1C2B2B"
+                                       LineBreakMode="TailTruncation"/>
+                                <Label Text="{Binding Category}" FontSize="10" TextColor="#90A4A4"/>
+                                <Label Text="{Binding DateDisplay}" FontSize="9" TextColor="#90A4A4"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="2" Spacing="5"
+                                                 VerticalOptions="Center" HorizontalOptions="End">
+                                <Label Text="{Binding AmountDisplay}" FontSize="13"
+                                       FontAttributes="Bold" HorizontalOptions="End"
+                                       TextColor="{Binding IsIncome,
+                                           Converter={StaticResource BoolToAmountColorConverter}}"/>
+                                <HorizontalStackLayout Spacing="5" HorizontalOptions="End">
+                                    <Border BackgroundColor="#E0F2F1"
+                                            StrokeShape="RoundRectangle 7" Stroke="Transparent"
+                                            Padding="7,4">
+                                        <Label Text="✏️" FontSize="11">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="OnEditTapped"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Border>
+                                    <Border BackgroundColor="#FFEBEE"
+                                            StrokeShape="RoundRectangle 7" Stroke="Transparent"
+                                            Padding="7,4">
+                                        <Label Text="🗑️" FontSize="11">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="OnDeleteTapped"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Border>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

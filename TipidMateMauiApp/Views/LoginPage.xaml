@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipidMateMauiApp.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#F8FAFB">
+    <ScrollView>
+        <Grid RowDefinitions="280,*">
+
+            <!-- HERO SECTION -->
+            <Grid Grid.Row="0" BackgroundColor="#4ECDC4">
+                <Ellipse Fill="#38b2aa" Opacity="0.35"
+                         WidthRequest="220" HeightRequest="220"
+                         HorizontalOptions="End" VerticalOptions="Start"
+                         Margin="0,-70,-70,0"/>
+                <Ellipse Fill="#2da89f" Opacity="0.2"
+                         WidthRequest="140" HeightRequest="140"
+                         HorizontalOptions="Start" VerticalOptions="End"
+                         Margin="-40,0,0,20"/>
+                <VerticalStackLayout HorizontalOptions="Center"
+                                     VerticalOptions="Center" Spacing="6">
+                    <Label Text="💳" FontSize="52" HorizontalOptions="Center"/>
+                    <Label Text="TipidMate" FontSize="34" FontAttributes="Bold"
+                           TextColor="White" HorizontalOptions="Center"/>
+                    <Label Text="Your personal finance buddy"
+                           FontSize="14" TextColor="#E0F7F5"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- WHITE FORM CARD -->
+            <Border Grid.Row="0" Grid.RowSpan="2"
+                    BackgroundColor="White"
+                    Margin="0,230,0,0"
+                    StrokeShape="RoundRectangle 28,28,0,0"
+                    Stroke="Transparent">
+                <ScrollView>
+                    <VerticalStackLayout Padding="26,32,26,56" Spacing="0">
+
+                        <!-- Header -->
+                        <Label Text="Welcome back! 👋"
+                               FontSize="22" FontAttributes="Bold"
+                               TextColor="#2D2D35" Margin="0,0,0,4"/>
+                        <Label Text="Sign in to manage your finances"
+                               FontSize="13" TextColor="#9898A6"
+                               Margin="0,0,0,24"/>
+
+                        <!-- Tab Toggle -->
+                        <Grid ColumnDefinitions="*,*" Margin="0,0,0,22"
+                              BackgroundColor="#F0F4F4" HeightRequest="42">
+                            <Border Grid.Column="0"
+                                    x:Name="LoginTabBorder"
+                                    BackgroundColor="#4ECDC4"
+                                    StrokeShape="RoundRectangle 10"
+                                    Stroke="Transparent" Margin="3">
+                                <Label Text="Sign In" FontSize="13"
+                                       FontAttributes="Bold" TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnLoginTabTapped"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                            <Border Grid.Column="1"
+                                    BackgroundColor="Transparent"
+                                    StrokeShape="RoundRectangle 10"
+                                    Stroke="Transparent" Margin="3">
+                                <Label Text="Sign Up" FontSize="13"
+                                       TextColor="#9898A6"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnSignUpTabTapped"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                        </Grid>
+
+                        <!-- Error Banner -->
+                        <Border x:Name="ErrorBorder" IsVisible="False"
+                                BackgroundColor="#FFEBEE"
+                                StrokeShape="RoundRectangle 12"
+                                Stroke="#C6282833" StrokeThickness="1"
+                                Padding="12,10" Margin="0,0,0,14">
+                            <HorizontalStackLayout Spacing="7">
+                                <Label Text="⚠️" FontSize="14" VerticalOptions="Center"/>
+                                <Label x:Name="ErrorLabel" FontSize="13"
+                                       FontAttributes="Bold" TextColor="#C62828"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </Border>
+
+                        <!-- Success Banner -->
+                        <Border x:Name="SuccessBorder" IsVisible="False"
+                                BackgroundColor="#E8F5E9"
+                                StrokeShape="RoundRectangle 12"
+                                Stroke="#2E7D3233" StrokeThickness="1"
+                                Padding="12,10" Margin="0,0,0,14">
+                            <HorizontalStackLayout Spacing="7">
+                                <Label Text="✅" FontSize="14" VerticalOptions="Center"/>
+                                <Label x:Name="SuccessLabel" FontSize="13"
+                                       FontAttributes="Bold" TextColor="#2E7D32"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </Border>
+
+                        <!-- SIGN IN PANEL -->
+                        <VerticalStackLayout x:Name="LoginPanel" Spacing="0">
+
+                            <Label Text="EMAIL" FontSize="10" FontAttributes="Bold"
+                                   TextColor="#90A4A4" CharacterSpacing="1"
+                                   Margin="0,0,0,6"/>
+                            <Border BackgroundColor="#F8FAFB"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="#E2EAEA" StrokeThickness="1.5"
+                                    Margin="0,0,0,13">
+                                <Grid ColumnDefinitions="40,*">
+                                    <Label Grid.Column="0" Text="✉️" FontSize="18"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                    <Entry x:Name="EmailEntry" Grid.Column="1"
+                                           Placeholder="Enter your email"
+                                           Keyboard="Email"
+                                           PlaceholderColor="#90A4A4"
+                                           TextColor="#1C2B2B" FontSize="14"
+                                           BackgroundColor="Transparent"
+                                           ReturnType="Next"/>
+                                </Grid>
+                            </Border>
+
+                            <Label Text="PASSWORD" FontSize="10" FontAttributes="Bold"
+                                   TextColor="#90A4A4" CharacterSpacing="1"
+                                   Margin="0,0,0,6"/>
+                            <Border BackgroundColor="#F8FAFB"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="#E2EAEA" StrokeThickness="1.5"
+                                    Margin="0,0,0,6">
+                                <Grid ColumnDefinitions="40,*,44">
+                                    <Label Grid.Column="0" Text="🔒" FontSize="18"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                    <Entry x:Name="PasswordEntry" Grid.Column="1"
+                                           Placeholder="Enter your password"
+                                           PlaceholderColor="#90A4A4"
+                                           TextColor="#1C2B2B" FontSize="14"
+                                           IsPassword="True"
+                                           BackgroundColor="Transparent"/>
+                                    <Button x:Name="ShowPassBtn" Grid.Column="2"
+                                            Text="👁️" FontSize="15"
+                                            BackgroundColor="Transparent"
+                                            TextColor="#90A4A4"
+                                            Clicked="OnTogglePasswordClicked"/>
+                                </Grid>
+                            </Border>
+
+                            <Label Text="Forgot password?"
+                                   FontSize="12" TextColor="#4ECDC4"
+                                   HorizontalOptions="End"
+                                   Margin="0,0,0,18">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <Border StrokeShape="RoundRectangle 14"
+                                    Stroke="Transparent" Margin="0,0,0,18">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="#00897B" Offset="0"/>
+                                        <GradientStop Color="#4ECDC4" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border.Shadow>
+                                    <Shadow Brush="#4ECDC4" Opacity="0.35"
+                                            Radius="12" Offset="0,4"/>
+                                </Border.Shadow>
+                                <Button x:Name="SignInBtn"
+                                        Text="🔐  Sign In"
+                                        TextColor="White" FontSize="15"
+                                        FontAttributes="Bold"
+                                        BackgroundColor="Transparent"
+                                        Clicked="OnLoginClicked"/>
+                            </Border>
+
+                        </VerticalStackLayout>
+
+                        <!-- SIGN UP PANEL -->
+                        <VerticalStackLayout x:Name="SignUpPanel"
+                                             IsVisible="False" Spacing="0">
+
+                            <Label Text="YOUR NAME" FontSize="10" FontAttributes="Bold"
+                                   TextColor="#90A4A4" CharacterSpacing="1"
+                                   Margin="0,0,0,6"/>
+                            <Border BackgroundColor="#F8FAFB"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="#E2EAEA" StrokeThickness="1.5"
+                                    Margin="0,0,0,13">
+                                <Grid ColumnDefinitions="40,*">
+                                    <Label Grid.Column="0" Text="👤" FontSize="18"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                    <Entry x:Name="SignUpNameEntry" Grid.Column="1"
+                                           Placeholder="e.g. Leira Mae"
+                                           PlaceholderColor="#90A4A4"
+                                           TextColor="#1C2B2B" FontSize="14"
+                                           BackgroundColor="Transparent"
+                                           ReturnType="Next"/>
+                                </Grid>
+                            </Border>
+
+                            <Label Text="EMAIL" FontSize="10" FontAttributes="Bold"
+                                   TextColor="#90A4A4" CharacterSpacing="1"
+                                   Margin="0,0,0,6"/>
+                            <Border BackgroundColor="#F8FAFB"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="#E2EAEA" StrokeThickness="1.5"
+                                    Margin="0,0,0,13">
+                                <Grid ColumnDefinitions="40,*">
+                                    <Label Grid.Column="0" Text="✉️" FontSize="18"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                    <Entry x:Name="SignUpEmailEntry" Grid.Column="1"
+                                           Placeholder="your@email.com"
+                                           Keyboard="Email"
+                                           PlaceholderColor="#90A4A4"
+                                           TextColor="#1C2B2B" FontSize="14"
+                                           BackgroundColor="Transparent"
+                                           ReturnType="Next"/>
+                                </Grid>
+                            </Border>
+
+                            <Label Text="PASSWORD" FontSize="10" FontAttributes="Bold"
+                                   TextColor="#90A4A4" CharacterSpacing="1"
+                                   Margin="0,0,0,6"/>
+                            <Border BackgroundColor="#F8FAFB"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="#E2EAEA" StrokeThickness="1.5"
+                                    Margin="0,0,0,18">
+                                <Grid ColumnDefinitions="40,*">
+                                    <Label Grid.Column="0" Text="🔒" FontSize="18"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                    <Entry x:Name="SignUpPasswordEntry" Grid.Column="1"
+                                           Placeholder="Min. 6 characters"
+                                           PlaceholderColor="#90A4A4"
+                                           TextColor="#1C2B2B" FontSize="14"
+                                           IsPassword="True"
+                                           BackgroundColor="Transparent"/>
+                                </Grid>
+                            </Border>
+
+                            <Border StrokeShape="RoundRectangle 14"
+                                    Stroke="Transparent" Margin="0,0,0,18">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="#00897B" Offset="0"/>
+                                        <GradientStop Color="#4ECDC4" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border.Shadow>
+                                    <Shadow Brush="#4ECDC4" Opacity="0.35"
+                                            Radius="12" Offset="0,4"/>
+                                </Border.Shadow>
+                                <Button x:Name="SignUpBtn"
+                                        Text="✨  Create Account"
+                                        TextColor="White" FontSize="15"
+                                        FontAttributes="Bold"
+                                        BackgroundColor="Transparent"
+                                        Clicked="OnSignUpClicked"/>
+                            </Border>
+
+                        </VerticalStackLayout>
+
+                        <!-- OR Divider -->
+                        <Grid ColumnDefinitions="*,Auto,*"
+                              Margin="0,0,0,16" VerticalOptions="Center">
+                            <BoxView Grid.Column="0" Color="#E2EAEA"
+                                     HeightRequest="1" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" Text=" or "
+                                   FontSize="12" TextColor="#9898A6"
+                                   VerticalOptions="Center"/>
+                            <BoxView Grid.Column="2" Color="#E2EAEA"
+                                     HeightRequest="1" VerticalOptions="Center"/>
+                        </Grid>
+
+                        <!-- Google Sign-In Button -->
+                        <Border BackgroundColor="White"
+                                StrokeShape="RoundRectangle 14"
+                                Stroke="#E2EAEA" StrokeThickness="1.5"
+                                Margin="0,0,0,10">
+                            <Border.Shadow>
+                                <Shadow Brush="#00000015" Opacity="0.08"
+                                        Radius="8" Offset="0,2"/>
+                            </Border.Shadow>
+                            <Button x:Name="GoogleBtn"
+                                    Text="G  Continue with Google"
+                                    TextColor="#3C4043" FontSize="14"
+                                    FontAttributes="Bold"
+                                    BackgroundColor="Transparent"
+                                    Clicked="OnGoogleSignInClicked"/>
+                        </Border>
+
+                        <!-- Loading Indicator -->
+                        <ActivityIndicator x:Name="LoadingIndicator"
+                                           IsRunning="False" IsVisible="False"
+                                           Color="#4ECDC4" HeightRequest="32"
+                                           Margin="0,8,0,0"/>
+
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Border>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

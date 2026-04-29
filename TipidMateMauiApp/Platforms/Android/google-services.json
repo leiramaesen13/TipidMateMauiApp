@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "490364501530",
+    "project_id": "tipidmate-d63e4",
+    "storage_bucket": "tipidmate-d63e4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490364501530:android:426d45e0c4baa8e14b9ba3",
+        "android_client_info": {
+          "package_name": "com.companyname.tipidmatemauiapp.apk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490364501530-hu7lm1bdq3tv57m5dqdmkn1ho11ftkrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx4RQYZfBsiTeW-owrROSLGDg_6uMuayE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490364501530-hu7lm1bdq3tv57m5dqdmkn1ho11ftkrb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

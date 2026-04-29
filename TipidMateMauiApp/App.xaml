@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TipidMateMauiApp.Converters"
+             x:Class="TipidMateMauiApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <converters:BoolToColorConverter       x:Key="BoolToColorConverter"/>
+            <converters:BoolToAmountColorConverter x:Key="BoolToAmountColorConverter"/>
+            <converters:NullToAddEditConverter     x:Key="NullToAddEditConverter"/>
+
+            <!-- ── BRAND COLORS ── -->
+            <Color x:Key="Teal">#00897B</Color>
+            <Color x:Key="TealDark">#00695C</Color>
+            <Color x:Key="TealLight">#E0F2F1</Color>
+            <Color x:Key="Mint">#26A69A</Color>
+            <Color x:Key="Income">#2E7D32</Color>
+            <Color x:Key="IncomeLight">#E8F5E9</Color>
+            <Color x:Key="Expense">#C62828</Color>
+            <Color x:Key="ExpenseLight">#FFEBEE</Color>
+            <Color x:Key="Warning">#F57F17</Color>
+            <Color x:Key="WarningLight">#FFF8E1</Color>
+            <Color x:Key="Snow">#F8FAFB</Color>
+            <Color x:Key="Cloud">#F1F5F5</Color>
+            <Color x:Key="Silver">#E2EAEA</Color>
+            <Color x:Key="Slate">#90A4A4</Color>
+            <Color x:Key="Ink">#37474F</Color>
+            <Color x:Key="Charcoal">#1C2B2B</Color>
+
+            <!-- Legacy keys used in old XAML -->
+            <Color x:Key="Cream">#F8FAFB</Color>
+            <Color x:Key="Muted">#90A4A4</Color>
+            <Color x:Key="WarmLight">#90A4A4</Color>
+            <Color x:Key="Border">#E2EAEA</Color>
+            <Color x:Key="IncomeGreen">#2E7D32</Color>
+            <Color x:Key="ExpenseRed">#C62828</Color>
+            <Color x:Key="Charcoal2">#1C2B2B</Color>
+
+            <!-- ── GLOBAL STYLES ── -->
+            <Style TargetType="Shell" ApplyToDerivedTypes="True">
+                <Setter Property="Shell.BackgroundColor"       Value="#00897B"/>
+                <Setter Property="Shell.ForegroundColor"       Value="White"/>
+                <Setter Property="Shell.TitleColor"            Value="White"/>
+                <Setter Property="Shell.TabBarBackgroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="#00897B"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#90A4A4"/>
+                <Setter Property="Shell.TabBarTitleColor"      Value="#00897B"/>
+            </Style>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#00897B"/>
+                <Setter Property="BarTextColor"       Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

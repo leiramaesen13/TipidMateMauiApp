@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TipidMateMauiApp.ViewModels"
+             x:Class="TipidMateMauiApp.Views.MainPage"
+             x:DataType="vm:MainViewModel"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#FAF9F6">
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="White" Padding="22,52,22,16">
+            <Grid ColumnDefinitions="*,Auto,Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="2">
+                    <Label Text="TipidMate 💳" FontSize="10" FontAttributes="Bold"
+               TextColor="#4ECDC4" CharacterSpacing="2"/>
+                    <Label x:Name="GreetingLabel" FontSize="20" FontAttributes="Bold"
+               TextColor="#2D2D35"/>
+                    <Label Text="{Binding CurrentMonthDisplay}"
+               FontSize="11" TextColor="#9898A6"
+               FontAttributes="Italic"/>
+                </VerticalStackLayout>
+
+                <!-- Balance Pill (now Column 1, middle) -->
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 14"
+                StrokeThickness="1.5" Padding="12,6" Margin="0,0,10,0">
+                    <Border.Stroke>
+                        <Binding Path="BalanceColor"/>
+                    </Border.Stroke>
+                    <VerticalStackLayout Spacing="1">
+                        <Label Text="BALANCE" FontSize="9" FontAttributes="Bold"
+                       TextColor="#9898A6" CharacterSpacing="1"
+                       HorizontalOptions="Center"/>
+                        <Label Text="{Binding BalanceDisplay}"
+                       FontSize="14" FontAttributes="Bold"
+                       TextColor="{Binding BalanceColor}"
+                       HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Profile Initials Circle (now Column 2, far right) -->
+                <Border Grid.Column="2" WidthRequest="38" HeightRequest="38"
+                StrokeShape="RoundRectangle 19"
+                BackgroundColor="#4ECDC4"
+                Stroke="Transparent">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileTapped"/>
+                    </Border.GestureRecognizers>
+                    <Label x:Name="ProfileInitialsLabel"
+                   FontSize="13" FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+                </Border>
+            </Grid>
+        </Grid>
+
+        <!-- Scrollable Body -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="16,16,16,100" Spacing="14">
+
+                <!-- KPI Cards -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <Border Grid.Column="0" BackgroundColor="#E8FBF8"
+                            StrokeShape="RoundRectangle 20"
+                            Stroke="#4ECDC422" Padding="16">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="📈" FontSize="22"/>
+                            <Label Text="INCOME" FontSize="10" FontAttributes="Bold"
+                                   TextColor="#9898A6" CharacterSpacing="1"/>
+                            <Label Text="{Binding TotalIncomeDisplay}"
+                                   FontSize="16" FontAttributes="Bold"
+                                   TextColor="#06D6A0"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    <Border Grid.Column="1" BackgroundColor="#FFF0F0"
+                            StrokeShape="RoundRectangle 20"
+                            Stroke="#FF6B6B22" Padding="16">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="📉" FontSize="22"/>
+                            <Label Text="EXPENSES" FontSize="10" FontAttributes="Bold"
+                                   TextColor="#9898A6" CharacterSpacing="1"/>
+                            <Label Text="{Binding TotalExpenseDisplay}"
+                                   FontSize="16" FontAttributes="Bold"
+                                   TextColor="#FF6B6B"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <!-- Savings Rate Card -->
+                <Border StrokeShape="RoundRectangle 20" Stroke="Transparent" Padding="18">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#4ECDC4" Offset="0"/>
+                            <GradientStop Color="#38b2aa" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout Grid.Column="0" Spacing="4">
+                            <Label Text="SAVINGS RATE" FontSize="10" FontAttributes="Bold"
+                                   TextColor="#E0F7F5" CharacterSpacing="1"/>
+                            <Label Text="{Binding SavingsRateDisplay}"
+                                   FontSize="32" FontAttributes="Bold"
+                                   TextColor="White"/>
+                            <Label Text="{Binding SavingsMessage}"
+                                   FontSize="12" TextColor="#E0F7F5"/>
+                            <Border BackgroundColor="#40FFFFFF"
+                                    StrokeShape="RoundRectangle 4"
+                                    HeightRequest="6" Margin="0,6,0,0">
+                                <Border x:Name="SavingsProgressBar"
+                                        BackgroundColor="White"
+                                        StrokeShape="RoundRectangle 4"
+                                        HeightRequest="6"
+                                        HorizontalOptions="Start"
+                                        WidthRequest="0"/>
+                            </Border>
+                        </VerticalStackLayout>
+                        <Label Grid.Column="1" Text="🏦" FontSize="48"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                </Border>
+
+                <!-- Category Breakdown -->
+                <Border BackgroundColor="White" StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1" Padding="18">
+                    <VerticalStackLayout Spacing="0">
+                        <Grid ColumnDefinitions="*,Auto" Margin="0,0,0,14">
+                            <Label Grid.Column="0" Text="📊 By Category"
+                                   FontSize="14" FontAttributes="Bold"
+                                   TextColor="#2D2D35"/>
+                            <Border Grid.Column="1" BackgroundColor="#E8FBF8"
+                                    StrokeShape="RoundRectangle 8"
+                                    Stroke="Transparent" Padding="10,4">
+                                <Label Text="🎯 Budgets" FontSize="11"
+                                       FontAttributes="Bold" TextColor="#4ECDC4">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBudgetsClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Border>
+                        </Grid>
+                        <VerticalStackLayout x:Name="CategoryBarsStack" Spacing="14"/>
+                        <Label x:Name="NoCategoriesLabel"
+                               Text="No expenses yet — tap Add!"
+                               FontSize="13" TextColor="#9898A6"
+                               HorizontalOptions="Center" Padding="0,20"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Recent Transactions -->
+                <Border BackgroundColor="White" StrokeShape="RoundRectangle 20"
+                        Stroke="#EFEFEF" StrokeThickness="1" Padding="18">
+                    <VerticalStackLayout Spacing="0">
+                        <Grid ColumnDefinitions="*,Auto" Margin="0,0,0,12">
+                            <Label Grid.Column="0" Text="🕐 Recent"
+                                   FontSize="14" FontAttributes="Bold"
+                                   TextColor="#2D2D35"/>
+                            <Label Grid.Column="1" Text="View All →"
+                                   FontSize="12" FontAttributes="Bold"
+                                   TextColor="#4ECDC4">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnViewAllClicked"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                        <VerticalStackLayout x:Name="RecentStack" Spacing="10"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Add Button -->
+                <Border StrokeShape="RoundRectangle 16" Stroke="Transparent">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#4ECDC4" Offset="0"/>
+                            <GradientStop Color="#38b2aa" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Button Text="➕  Add New Entry"
+                            TextColor="White" FontSize="16" FontAttributes="Bold"
+                            BackgroundColor="Transparent"
+                            Clicked="OnAddEntryClicked"/>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

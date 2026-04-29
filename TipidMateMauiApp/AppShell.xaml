@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:TipidMateMauiApp.Views"
+       x:Class="TipidMateMauiApp.AppShell"
+       Shell.NavBarIsVisible="False">
+
+    <Shell.Resources>
+        <Style TargetType="Shell" ApplyToDerivedTypes="True">
+            <Setter Property="Shell.TabBarBackgroundColor"    Value="White"/>
+            <Setter Property="Shell.TabBarForegroundColor"    Value="#00897B"/>
+            <Setter Property="Shell.TabBarUnselectedColor"    Value="#90A4A4"/>
+            <Setter Property="Shell.TabBarTitleColor"         Value="#00897B"/>
+        </Style>
+    </Shell.Resources>
+
+    <TabBar>
+        <Tab Title="Home" Icon="tab_home.png">
+            <ShellContent ContentTemplate="{DataTemplate views:MainPage}"
+                          Route="MainPage"/>
+        </Tab>
+        <Tab Title="Add" Icon="tab_add.png">
+            <ShellContent ContentTemplate="{DataTemplate views:AddEntryPage}"
+                          Route="AddEntryPage"/>
+        </Tab>
+        <Tab Title="History" Icon="tab_history.png">
+            <ShellContent ContentTemplate="{DataTemplate views:HistoryPage}"
+                          Route="HistoryPage"/>
+        </Tab>
+        <Tab Title="Summary" Icon="tab_summary.png">
+            <ShellContent ContentTemplate="{DataTemplate views:SummaryPage}"
+                          Route="SummaryPage"/>
+        </Tab>
+        <Tab Title="Profile" Icon="tab_profile.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}"
+                          Route="ProfilePage"/>
+        </Tab>
+    </TabBar>
+</Shell>

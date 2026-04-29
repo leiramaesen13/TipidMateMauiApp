@@ -1,0 +1,531 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\tipidmatemauiapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\tipidmatemauiapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\summarypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\summarypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ACER ASPIRE\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250909003\\buildTransitive\\Microsoft.WindowsAppSDK.SelfContained.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ACER ASPIRE\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.15\\build\\Microsoft.NET.ILLink.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\summarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\summarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\linker.xml||{6B79B2C4-8503-4A04-8248-ADCEF2B49CB1}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\linker.xml||{6B79B2C4-8503-4A04-8248-ADCEF2B49CB1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\historypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\historypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ACER ASPIRE\\.nuget\\packages\\livecharts\\0.9.7\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\addentrypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\addentrypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\addentrypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\addentrypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\services\\recurringtransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\services\\recurringtransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\models\\recurringtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\models\\recurringtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\budgetpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\budgetpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|c:\\users\\acer aspire\\source\\repos\\tipidmatemauiapp\\tipidmatemauiapp\\converters\\converters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32394696-C5D7-4787-8188-ADB1FECC3F84}|TipidMateMauiApp\\TipidMateMauiApp.csproj|solutionrelative:tipidmatemauiapp\\converters\\converters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 392,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SummaryPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\SummaryPage.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\SummaryPage.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\SummaryPage.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\SummaryPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIABAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-16T04:29:47.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TipidMateMauiApp.csproj",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\TipidMateMauiApp.csproj",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\TipidMateMauiApp.csproj",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\TipidMateMauiApp.csproj",
+              "RelativeToolTip": "TipidMateMauiApp\\TipidMateMauiApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-27T17:53:58.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SummaryPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\SummaryPage.xaml.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\SummaryPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\SummaryPage.xaml.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\SummaryPage.xaml.cs",
+              "ViewState": "AgIAAE8BAAAAAAAAAAAYwFABAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T04:31:50.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\MauiProgram.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\MauiProgram.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T06:21:41.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f96a0d64-71fd-316f-b663-924c78154f2a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HistoryPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\HistoryPage.xaml.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\HistoryPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\HistoryPage.xaml.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\HistoryPage.xaml.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAswEgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T04:03:34.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAOkBAAAAAAAAAAAswPcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T06:22:18.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "linker.xml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\linker.xml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\linker.xml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\linker.xml",
+              "RelativeToolTip": "TipidMateMauiApp\\linker.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-04-28T02:44:30.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\App.xaml.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T22:48:23.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\ProfilePage.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\ProfilePage.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\ProfilePage.xaml",
+              "ViewState": "AgIAAIIBAAAAAAAAAAAcwJsBAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-16T04:30:09.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T06:23:57.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Firebaseservice.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Services\\Firebaseservice.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Services\\Firebaseservice.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Services\\Firebaseservice.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Services\\Firebaseservice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIABAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T22:44:16.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Services\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Services\\DatabaseService.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Services\\DatabaseService.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Services\\DatabaseService.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAowI4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T06:30:39.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AddEntryPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\AddEntryPage.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\AddEntryPage.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\AddEntryPage.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\AddEntryPage.xaml",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAAABABAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T06:45:30.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddEntryPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\AddEntryPage.xaml.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\AddEntryPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\AddEntryPage.xaml.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\AddEntryPage.xaml.cs",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAAwCsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T22:33:32.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RecurringTransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Services\\RecurringTransactionService.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Services\\RecurringTransactionService.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Services\\RecurringTransactionService.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Services\\RecurringTransactionService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T22:42:26.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RecurringTransaction.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Models\\RecurringTransaction.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Models\\RecurringTransaction.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Models\\RecurringTransaction.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Models\\RecurringTransaction.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T22:41:07.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\LoginPage.xaml.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T06:25:39.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProfilePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\ProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\ProfilePage.xaml.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\ProfilePage.xaml.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\ProfilePage.xaml.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAgwE8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T04:30:13.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "BudgetPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\BudgetPage.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\BudgetPage.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\BudgetPage.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\BudgetPage.xaml",
+              "ViewState": "AgIAAGIAAAAAAAAAAADwv7UAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-16T05:28:58.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\App.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\App.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\App.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-16T04:05:30.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\AppShell.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-16T04:05:27.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\MainPage.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T06:32:05.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\MainPage.xaml.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T06:31:58.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Resources\\Styles\\Styles.xaml",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Resources\\Styles\\Styles.xaml",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Resources\\Styles\\Styles.xaml",
+              "RelativeToolTip": "TipidMateMauiApp\\Resources\\Styles\\Styles.xaml",
+              "ViewState": "AgIAAE0BAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T06:21:49.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Views\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Views\\MainPage.xaml.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Views\\MainPage.xaml.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAswOsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T05:33:00.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Converters.cs",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Converters\\Converters.cs",
+              "RelativeDocumentMoniker": "TipidMateMauiApp\\Converters\\Converters.cs",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\source\\repos\\TipidMateMauiApp\\TipidMateMauiApp\\Converters\\Converters.cs",
+              "RelativeToolTip": "TipidMateMauiApp\\Converters\\Converters.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T11:08:18.739Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 18,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Microsoft.WindowsAppSDK.SelfContained.targets",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250909003\\buildTransitive\\Microsoft.WindowsAppSDK.SelfContained.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250909003\\buildTransitive\\Microsoft.WindowsAppSDK.SelfContained.targets",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250909003\\buildTransitive\\Microsoft.WindowsAppSDK.SelfContained.targets",
+              "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250909003\\buildTransitive\\Microsoft.WindowsAppSDK.SelfContained.targets",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAQwFkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-04-28T12:27:35.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Microsoft.NET.ILLink.targets",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.15\\build\\Microsoft.NET.ILLink.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.15\\build\\Microsoft.NET.ILLink.targets",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.15\\build\\Microsoft.NET.ILLink.targets",
+              "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.15\\build\\Microsoft.NET.ILLink.targets",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAQwF8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-04-28T02:32:16.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "readme.txt",
+              "DocumentMoniker": "C:\\Users\\ACER ASPIRE\\.nuget\\packages\\livecharts\\0.9.7\\readme.txt",
+              "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\livecharts\\0.9.7\\readme.txt",
+              "ToolTip": "C:\\Users\\ACER ASPIRE\\.nuget\\packages\\livecharts\\0.9.7\\readme.txt",
+              "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\livecharts\\0.9.7\\readme.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-27T23:26:17.065Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 19,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

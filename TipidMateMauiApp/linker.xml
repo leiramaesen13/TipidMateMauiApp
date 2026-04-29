@@ -1,0 +1,8 @@
+﻿<linker>
+	<assembly fullname="SkiaSharp.Views.Maui">
+		<type fullname="*" preserve="all"/>
+	</assembly>
+	<assembly fullname="SkiaSharp.Views.Maui.Controls">
+		<type fullname="*" preserve="all"/>
+	</assembly>
+</linker>

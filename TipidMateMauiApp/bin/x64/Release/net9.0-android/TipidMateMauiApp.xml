@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TipidMateMauiApp</name>
+    </assembly>
+    <members>
+        <member name="M:TipidMateMauiApp.Services.DatabaseService.HasMigratedToFirebaseAsync">
+            <summary>Returns true if SQLite data has already been migrated to Firebase.</summary>
+        </member>
+        <member name="P:TipidMateMauiApp.ViewModels.MainViewModel.ChartFilterHeader">
+            <summary>
+            Header text shown above the filtered list on SummaryPage.
+            </summary>
+        </member>
+        <member name="P:TipidMateMauiApp.ViewModels.MainViewModel.ChartFilteredTransactions">
+            <summary>
+            Expenses for the current month, optionally filtered to one category.
+            Used by SummaryPage's transaction list beneath the charts.
+            </summary>
+        </member>
+        <member name="M:TipidMateMauiApp.ViewModels.MainViewModel.SetChartFilter(System.String)">
+            <summary>
+            Set or clear the chart category filter.
+            Pass null to show all expenses.
+            </summary>
+        </member>
+        <member name="T:TipidMateMauiApp.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>
