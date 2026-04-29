@@ -1,11 +1,11 @@
-name: Build .NET MAUI App
+name: Build MAUI Android APK
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-android:
     runs-on: windows-latest
 
     steps:
@@ -17,11 +17,20 @@ jobs:
       with:
         dotnet-version: '9.0.x'
 
-    - name: Install MAUI workloads
+    - name: Install MAUI workload
       run: dotnet workload install maui
 
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: Build project
-      run: dotnet build --configuration Release
+    - name: Build Android APK
+      run: dotnet build -f net9.0-android -c Release
+
+    - name: Publish APK
+      run: dotnet publish -f net9.0-android -c Release -o publish
+    
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: android-apk
+        path: publish/**/*.apk
