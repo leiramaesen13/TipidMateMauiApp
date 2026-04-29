@@ -3,8 +3,6 @@ name: Build .NET MAUI App
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
@@ -18,6 +16,9 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '9.0.x'
+
+    - name: Install MAUI workloads
+      run: dotnet workload install maui
 
     - name: Restore dependencies
       run: dotnet restore

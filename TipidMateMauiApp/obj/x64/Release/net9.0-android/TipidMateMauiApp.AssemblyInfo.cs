@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TipidMateMauiApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+88178d46e48000210785f4bd56e5b3e5fd05d5e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+2a773e16237c711468ffcbd623658c2cfade365e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TipidMateMauiApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TipidMateMauiApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
